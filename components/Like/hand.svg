@@ -1,0 +1,12 @@
+<svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<clipPath id="clip30_92">
+			<rect id="SWM icons / outline / like" rx="0.000000" width="15.000000" height="15.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip30_92)">
+		<g style="mix-blend-mode:normal">
+			<path id="shape" d="M5.33 6.66L2.66 6.66L2.66 13.33L5.33 13.33L11.57 13.33C12.2 13.33 12.75 12.88 12.88 12.26L13.68 8.26C13.84 7.43 13.21 6.66 12.37 6.66L9.33 6.66L10.95 4.24C11.46 3.47 11.05 2.43 10.16 2.2L10.13 2.19C9.64 2.07 9.12 2.24 8.79 2.62L5.33 6.66L5.33 13.33" stroke="#808080" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linejoin="round"/>
+		</g>
+	</g>
+</svg>
