@@ -1,5 +1,7 @@
-import { Card } from "@/components/Card/Card";
+"use client";
+import { Card, LikeButton } from "@/components";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 
 const obj = {
   img: "/card-image.png",
@@ -10,6 +12,21 @@ const obj = {
 };
 
 export default function Home() {
+  const [isLike, setIsLike] = useState(false);
+
+  useEffect(() => {
+    async function setPosts() {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts/1", {
+        method: "PATCH",
+        body: JSON.stringify({ isLike }),
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      return res.json();
+    }
+    // корсы вызывают ошибку
+    setPosts().then(console.log);
+  }, [isLike]);
+
   return (
     <div className={styles.page}>
       <Card
@@ -20,6 +37,7 @@ export default function Home() {
         theme={obj.theme}
         term={obj.term}
       />
+      <LikeButton isLike={isLike} setIsLike={setIsLike} />
     </div>
   );
 }

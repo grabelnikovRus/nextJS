@@ -1,5 +1,6 @@
 :root {
   --black: rgb(44, 44, 44);
+  --white: #FFF;
   --black-secondary: rgb(75, 75, 75);
   --gray: rgb(110, 110, 110);
   --blue: rgb(20, 115, 230);
