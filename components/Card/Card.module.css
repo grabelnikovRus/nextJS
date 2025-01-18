@@ -1,0 +1,89 @@
+.card {
+  display: grid;
+  width: 350px;
+  padding: 10px;
+  row-gap: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: var(--bg-blue);
+  border-radius: 5px;
+}
+
+.content {
+  display: grid;
+  row-gap: 8px;
+  grid-template-areas:
+    "theme term like"
+    "title title title"
+    "desc desc desc";
+  grid-template-columns: auto auto 1fr;
+}
+
+.theme {
+  grid-area: theme;
+  display: block;
+  position: relative;
+  color: var(--black-secondary);
+  margin-right: 16px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.theme::before {
+  content: "";
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: -10px;
+  width: 3px;
+  height: 3px;
+  background: var(--black-secondary);
+}
+
+.term {
+  grid-area: term;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--gray);
+}
+
+.like {
+  grid-area: like;
+  justify-self: flex-end;
+}
+
+.title {
+  grid-area: title;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.description {
+  grid-area: desc;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.time {
+  color: var(--gray);
+  margin-right: auto;
+  font-size: 12px;
+  line-height: 16px;
+}

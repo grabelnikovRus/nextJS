@@ -1,0 +1,10 @@
+.root {
+  padding: 2px;
+  display: flex;
+  column-gap: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--gray);
+  cursor: pointer;
+}
