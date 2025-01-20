@@ -1,4 +1,18 @@
 .page {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+  gap: 30px;
   justify-content: center;
+}
+
+.like {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1490px) {
+  .page {
+    grid-template-columns: auto repeat(2, 350px) auto;
+  }
 }

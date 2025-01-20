@@ -9,7 +9,10 @@ const obj = {
   title: "Как работать с CSS Grid",
   theme: "Front-end",
   term: "1 месяц назад",
+  like: 4,
 };
+
+const arr = new Array(18).fill(obj);
 
 export default function Home() {
   const [isLike, setIsLike] = useState(false);
@@ -26,18 +29,25 @@ export default function Home() {
     // корсы вызывают ошибку
     setPosts().then(console.log);
   }, [isLike]);
-
   return (
     <div className={styles.page}>
-      <Card
-        likeCount={4}
-        img={obj.img}
-        description={obj.desc}
-        title={obj.title}
-        theme={obj.theme}
-        term={obj.term}
-      />
-      <LikeButton isLike={isLike} setIsLike={setIsLike} />
+      {arr.map((obj, i) =>
+        i === 3 ? (
+          <span className={styles.like} key={i}>
+            <LikeButton isLike={isLike} setIsLike={setIsLike} />
+          </span>
+        ) : (
+          <Card
+            likeCount={obj.like}
+            img={obj.img}
+            description={obj.desc}
+            title={obj.title}
+            theme={obj.theme}
+            term={obj.term}
+            key={i}
+          />
+        ),
+      )}
     </div>
   );
 }
