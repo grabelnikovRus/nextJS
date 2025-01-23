@@ -2,6 +2,7 @@ import { Card } from "@/components";
 import styles from "./page.module.css";
 import { getPosts } from "@/helpers/getPosts";
 import { notFound } from "next/navigation";
+import { Wrapper } from "@/components/Wrapper/Wrapper";
 
 export default async function Home() {
   const post = await getPosts();
@@ -21,6 +22,7 @@ export default async function Home() {
           key={id}
         />
       ))}
+      <Wrapper />
     </div>
   );
 }
