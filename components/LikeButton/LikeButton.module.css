@@ -1,0 +1,17 @@
+.like {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid var(--black);
+  background: transparent;
+}
+
+.is-like {
+  background: var(--black);
+  border: 1px solid var(--white);
+}
+
+.is-like svg path {
+  stroke: var(--white);
+}
