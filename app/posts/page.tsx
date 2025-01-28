@@ -4,14 +4,14 @@ import { getPosts } from "@/helpers/getPosts";
 import { notFound } from "next/navigation";
 import { Wrapper } from "@/components/Wrapper/Wrapper";
 
-export default async function Home() {
-  const post = await getPosts();
+export default async function Post() {
+  const posts = await getPosts();
 
-  if (!post) return notFound();
+  if (!posts) return notFound();
 
   return (
     <div className={styles.page}>
-      {post.map(({ title, body, id }) => (
+      {posts.map(({ title, body, id }) => (
         <Card
           likeCount={4}
           img="/card-image.png"
@@ -20,6 +20,7 @@ export default async function Home() {
           theme="Front-end"
           term="1 месяц назад"
           key={id}
+          id={id.toString()}
         />
       ))}
       <Wrapper />

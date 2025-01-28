@@ -10,6 +10,7 @@ export const Card = ({
   likeCount,
   title,
   description,
+  id,
 }: CardProps) => {
   return (
     <div className={s.card}>
@@ -25,7 +26,9 @@ export const Card = ({
       </div>
       <div className={s.footer}>
         <span className={s.time}>3 минуты</span>
-        <Button isArrow>Читать</Button>
+        <Button href={`/posts/${id}`} isArrow>
+          Читать
+        </Button>
       </div>
     </div>
   );

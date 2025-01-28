@@ -10,7 +10,9 @@ export const Header = () => {
 
   return (
     <header className={s.header}>
-      <h1>Мой блог</h1>
+      <Link href="/">
+        <h1>Мой блог</h1>
+      </Link>
       <Link href={href ?? "/"}>
         <Icon />
       </Link>
