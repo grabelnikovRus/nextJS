@@ -6,13 +6,9 @@ import s from "./LikeButton.module.css";
 export const LikeButton = ({
   isLike = false,
   className,
-  setIsLike,
+  onClick,
   ...props
 }: LikeButtonProps) => {
-  const onClick = () => {
-    setIsLike(!isLike);
-  };
-
   return (
     <button
       className={cn(s.like, className, { [s["is-like"]]: isLike })}

@@ -6,4 +6,5 @@ export interface ButtonProps
     HTMLButtonElement
   > {
   isArrow?: boolean;
+  href?: string;
 }

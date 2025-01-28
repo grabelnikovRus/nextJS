@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components";
+import { AppContextProveder, Header } from "@/components";
 
 const openSans = Open_Sans({
   display: "swap",
@@ -23,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={openSans.className}>
-        <Header />
-        {children}
+        <AppContextProveder>
+          <Header />
+          {children}
+        </AppContextProveder>
       </body>
     </html>
   );
