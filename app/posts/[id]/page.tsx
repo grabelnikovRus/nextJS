@@ -1,6 +1,5 @@
 import { getPosts } from "@/helpers/getPosts";
-
-import s from "./page.module.css";
+import { PageComponent } from "@/page-components";
 
 type PostPage = Promise<{ id: string }>;
 
@@ -13,10 +12,5 @@ export default async function Post(props: { params: PostPage }) {
   const params = await props.params;
   const post = await getPosts(params.id);
 
-  return (
-    <div className={s.page}>
-      <h2>{post?.title}</h2>
-      <p>{post?.body}</p>
-    </div>
-  );
+  return <PageComponent {...post} />;
 }

@@ -1,0 +1,18 @@
+.root {
+  padding-top: 25px;
+  display: grid;
+  gap: 20px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+.like {
+  display: grid;
+  grid-template-columns: max-content min-content;
+  align-items: center;
+  gap: 20px;
+}
