@@ -1,3 +1,4 @@
+import { getComments } from "@/helpers/getComments";
 import { getPosts } from "@/helpers/getPosts";
 import { PageComponent } from "@/page-components";
 
@@ -11,6 +12,7 @@ export async function generateStaticParams(): Promise<{ id: string }[]> {
 export default async function Post(props: { params: PostPage }) {
   const params = await props.params;
   const post = await getPosts(params.id);
+  const comments = await getComments(params.id);
 
-  return <PageComponent {...post} />;
+  return <PageComponent {...post} comments={comments} />;
 }

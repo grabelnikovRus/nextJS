@@ -1,9 +1,15 @@
-import { Info, LikeButton } from "@/components";
-import { PostType } from "@/interfaces/post";
+import { Info, LikeButton, Comment } from "@/components";
+import { PageComponentProps } from "./types";
 import Image from "next/image";
 import img from "@/public/image.webp";
+
 import s from "./PageComponent.module.css";
-export const PageComponent = ({ title, body }: PostType) => {
+
+export const PageComponent = ({
+  title,
+  body,
+  comments,
+}: PageComponentProps) => {
   return (
     <div className={s.root}>
       <h2 className={s.title}>{title}</h2>
@@ -13,6 +19,12 @@ export const PageComponent = ({ title, body }: PostType) => {
       <div className={s.like}>
         Понравилось? Жми
         <LikeButton />
+      </div>
+      <div className={s.comments}>
+        <h3>Комментарии</h3>
+        {comments.map(({ ...props }) => (
+          <Comment key={props.id} {...props} />
+        ))}
       </div>
     </div>
   );

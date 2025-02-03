@@ -16,3 +16,14 @@
   align-items: center;
   gap: 20px;
 }
+
+.comments {
+  display: grid;
+  row-gap: 20px;
+}
+
+.comments h3 {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 700;
+}
