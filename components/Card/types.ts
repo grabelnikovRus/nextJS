@@ -5,4 +5,5 @@ export interface CardProps {
   title: string;
   description: string;
   likeCount: number;
+  id: string;
 }

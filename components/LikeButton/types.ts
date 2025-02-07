@@ -6,5 +6,4 @@ export interface LikeButtonProps
     HTMLButtonElement
   > {
   isLike?: boolean;
-  setIsLike: (value: boolean) => void;
 }
