@@ -1,4 +1,4 @@
-import { Info, LikeButton, Comment } from "@/components";
+import { Info, LikeButton, Comment, Forms } from "@/components";
 import { PageComponentProps } from "./types";
 import Image from "next/image";
 import img from "@/public/image.webp";
@@ -26,6 +26,7 @@ export const PageComponent = ({
           <Comment key={props.id} {...props} />
         ))}
       </div>
+      <Forms />
     </div>
   );
 };

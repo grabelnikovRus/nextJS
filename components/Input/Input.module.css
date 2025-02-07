@@ -1,0 +1,42 @@
+.label {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  row-gap: 5px;
+}
+
+.label > span { 
+  margin-left: 5px;
+}
+
+.input {
+  height: 58px;
+  font-weight: 400;
+  border: 1px solid var(--gray);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.input__error {
+  border-color: red;
+  outline-color: red;
+}
+
+.input::placeholder {
+  color: var(--gray);
+}
+
+.error {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  color: red;
+  font-size: 14px;
+  line-height: 10px;
+  pointer-events: none;
+}

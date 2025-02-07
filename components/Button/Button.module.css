@@ -10,4 +10,6 @@
   font-size: 12px;
   line-height: 16px;
   color: var(--blue);
+  height: 48px;
+  border-radius: 5px;
 }

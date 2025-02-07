@@ -1,0 +1,83 @@
+.root {
+
+}
+
+.label {
+
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 58px;
+  font-weight: 400;
+  border: 1px solid var(--gray);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.select__error {
+  border-color: red;
+}
+
+.options {
+  display: grid;
+  row-gap: 7px;
+  position: absolute;
+  max-height: 200px;
+  overflow: auto;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  border: 1px solid  var(--gray);
+  border-radius: 5px;
+  background: var(--white);
+  padding: 10px 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.box {
+  border: 1px solid var(--gray);
+  width: 18px;
+  height: 18px;
+}
+
+.option__active > .box {
+  background: var(--gray);
+}
+
+.arrow {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: center center;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.arrow__rotate {
+  top: 19px;
+  transform: rotate(-180deg);
+}
+
+.error {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  color: red;
+  font-size: 14px;
+  line-height: 10px;
+  pointer-events: none;
+}
