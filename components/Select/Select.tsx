@@ -21,7 +21,7 @@ export const Select = ({
   const id = useId();
   const listRef = useRef<HTMLDivElement | null>(null);
   const node = useRef<Element | null>(null);
-console.log(error)
+  console.log(error);
   const onClickGlobal = useCallback(
     (event: MouseEvent) => {
       const target = event.target as Node;
@@ -71,7 +71,7 @@ console.log(error)
 
   useEffect(() => {
     onChange(value);
-  }, [value.length]);
+  }, [onChange, value, value.length]);
 
   return (
     <div className={cn(s.root, className)} {...props}>

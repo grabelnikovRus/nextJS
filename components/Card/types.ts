@@ -1,3 +1,5 @@
+import { Variants } from "framer-motion";
+
 export interface CardProps {
   img: string;
   theme: string;
@@ -6,4 +8,6 @@ export interface CardProps {
   description: string;
   likeCount: number;
   id: string;
+  draw: Variants;
+  index: number;
 }
