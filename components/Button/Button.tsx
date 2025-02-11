@@ -1,9 +1,9 @@
 import { ButtonProps } from "./types";
+import Link from "next/link";
 import Arrow from "./arrow.svg";
 import cn from "classnames";
 
 import s from "./Button.module.css";
-import Link from "next/link";
 
 export const Button = ({
   isArrow,
