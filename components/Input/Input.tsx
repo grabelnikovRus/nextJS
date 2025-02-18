@@ -7,7 +7,11 @@ export const Input = ({ label, className, error, ...props }: InputProps) => {
     <label className={cn(s.label, className)}>
       <span>{label}</span>
       <input className={cn(s.input, { [s.input__error]: error })} {...props} />
-      {error && <div className={s.error}>{error.message}</div>}
+      {error && (
+        <div role="log" className={s.error}>
+          {error.message}
+        </div>
+      )}
     </label>
   );
 };

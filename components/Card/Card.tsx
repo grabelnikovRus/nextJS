@@ -1,5 +1,6 @@
 import { CardProps } from "./types";
 import { Button, Like } from "@/components";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import s from "./Card.module.css";
 
@@ -11,9 +12,11 @@ export const Card = ({
   title,
   description,
   id,
+  draw,
+  index,
 }: CardProps) => {
   return (
-    <div className={s.card}>
+    <motion.div className={s.card} variants={draw} custom={index}>
       <div className={s.img}>
         <Image height={193} width={300} src={img} alt="photo" />
       </div>
@@ -30,6 +33,6 @@ export const Card = ({
           Читать
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 };
