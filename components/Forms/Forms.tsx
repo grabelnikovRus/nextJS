@@ -13,8 +13,9 @@ export const Forms = () => {
   const {
     handleSubmit,
     register,
+    clearErrors,
     control,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful },
   } = useForm<FormsStateType>();
 
   const onSubmit = (data: FormsStateType) => {
@@ -59,9 +60,10 @@ export const Forms = () => {
           required: { value: true, message: "Введите текст отзыва" },
         })}
       />
-      <Button type="submit" className={s.btn}>
+      <Button type="submit" className={s.btn} onClick={() => clearErrors()}>
         Отправить
       </Button>
+      {isSubmitSuccessful && <div role="alert">Отзыв успешно отправлен</div>}
     </form>
   );
 };

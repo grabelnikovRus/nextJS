@@ -79,7 +79,11 @@ export const Select = ({
       <div id={id} className={cn(s.select, { [s.select__error]: error })}>
         {value.join(", ")}
         <Arrow className={cn(s.arrow, { [s.arrow__rotate]: isOpen })} />
-        {error && <span className={s.error}>{error.message}</span>}
+        {error && (
+          <span role="log" className={s.error}>
+            {error.message}
+          </span>
+        )}
       </div>
       {isOpen && node.current && createPortal(ListNode, node.current)}
     </div>

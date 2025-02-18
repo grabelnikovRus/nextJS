@@ -7,4 +7,6 @@
   font-weight: 400;
   color: var(--black-secondary);
   cursor: pointer;
+  background: none;
+  border: none;
 }
