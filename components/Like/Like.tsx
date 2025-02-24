@@ -6,9 +6,13 @@ import s from "./Like.module.css";
 
 export const Like = ({ likeCount, className, ...props }: LikeProps) => {
   return (
-    <div className={cn(s.root, className)} {...props}>
+    <button
+      className={cn(s.root, className)}
+      {...props}
+      aria-label="Возможность установки лайка"
+    >
       {likeCount}
       <Hand />
-    </div>
+    </button>
   );
 };

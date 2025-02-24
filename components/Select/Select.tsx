@@ -21,7 +21,7 @@ export const Select = ({
   const id = useId();
   const listRef = useRef<HTMLDivElement | null>(null);
   const node = useRef<Element | null>(null);
-console.log(error)
+  console.log(error);
   const onClickGlobal = useCallback(
     (event: MouseEvent) => {
       const target = event.target as Node;
@@ -71,7 +71,7 @@ console.log(error)
 
   useEffect(() => {
     onChange(value);
-  }, [value.length]);
+  }, [onChange, value, value.length]);
 
   return (
     <div className={cn(s.root, className)} {...props}>
@@ -79,7 +79,11 @@ console.log(error)
       <div id={id} className={cn(s.select, { [s.select__error]: error })}>
         {value.join(", ")}
         <Arrow className={cn(s.arrow, { [s.arrow__rotate]: isOpen })} />
-        {error && <span className={s.error}>{error.message}</span>}
+        {error && (
+          <span role="log" className={s.error}>
+            {error.message}
+          </span>
+        )}
       </div>
       {isOpen && node.current && createPortal(ListNode, node.current)}
     </div>
